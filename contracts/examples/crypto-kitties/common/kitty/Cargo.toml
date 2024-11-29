@@ -1,0 +1,18 @@
+[package]
+name = "kitty"
+version = "0.0.0"
+authors = [ "dorin-iancu <dorin.iancu@numbat.com>",]
+edition = "2018"
+publish = false
+
+[lib]
+path = "src/lib.rs"
+
+[dependencies.numbat-wasm]
+version = "0.20.1"
+path = "../../../../../numbat-wasm"
+features = ["derive"]
+
+[dependencies.random]
+version = "0.0.0"
+path = "../random"

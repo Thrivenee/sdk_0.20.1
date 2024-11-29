@@ -1,0 +1,31 @@
+[package]
+name = "numbat-wasm-module-features"
+version = "0.20.1"
+edition = "2018"
+
+authors = ["Andrei Marinica <andrei.marinica@numbat.com>", "Numbat Network <contact@numbat.com>"]
+license = "GPL-3.0-only"
+readme = "README.md"
+repository = "https://github.com/Thrivenee/sdk_0.20.1.git"
+homepage = "https://numbat.com/"
+documentation = "https://docs.numbat.com/"
+description = "Numbat WebAssembly smart contract module for adding feature flags"
+keywords = ["numbat", "wasm", "webassembly", "blockchain", "contract"]
+categories = ["no-std", "wasm", "cryptography::cryptocurrencies"]
+
+[features]
+wasm-output-mode = ["numbat-wasm-node"]
+
+[dependencies.numbat-wasm]
+version = "0.20.1"
+path = "../../../numbat-wasm"
+features = ["derive"]
+
+[dependencies.numbat-wasm-node]
+version = "0.20.1"
+path = "../../../numbat-wasm-node"
+optional = true
+
+[dev-dependencies.numbat-wasm-debug]
+version = "0.20.1"
+path = "../../../numbat-wasm-debug"

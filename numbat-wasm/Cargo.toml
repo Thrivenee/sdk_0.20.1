@@ -1,0 +1,34 @@
+[package]
+name = "numbat-wasm"
+version = "0.20.1"
+edition = "2018"
+
+authors = ["Andrei Marinica <andrei.marinica@numbat.com>", "Numbat Network <contact@numbat.com>"]
+license = "GPL-3.0-only"
+readme = "README.md"
+repository = "https://github.com/Thrivenee/sdk_0.20.1.git"
+homepage = "https://numbat.com/"
+documentation = "https://docs.numbat.com/"
+description = "Numbat WebAssembly smart contract API"
+keywords = ["numbat", "wasm", "webassembly", "blockchain", "contract"]
+categories = ["no-std", "wasm", "cryptography::cryptocurrencies", "development-tools"]
+
+[features]
+derive = ["numbat-wasm-derive"]
+cb_closure_managed_deser = []
+
+[dependencies]
+wee_alloc = "0.4"
+arrayvec = { version = "0.7.1", default-features = false }
+hashbrown = "0.11.2"
+hex-literal = "0.3.1"
+
+[dependencies.numbat-wasm-derive]
+version = "=0.20.1"
+path = "../numbat-wasm-derive"
+optional = true
+
+[dependencies.numbat-codec]
+version = "0.7.0"
+path = "../numbat-codec"
+features = ["derive"]
